@@ -1,0 +1,159 @@
+ <template name="adminmanagement">   
+    <div class="container dashboard-container">
+        <div class="main-inner">
+            <!-- aside starts -->
+          {{ >adminmenu  }}
+            <!-- aside ends -->
+            <!-- dashboard right content section starts -->
+            <section class="right-section-dash mCustomScrollbar" data-mcs-theme="minimal">
+
+                <div class="popup-outr resetpass-popup">
+                        <div class="popup-inner">
+                        <h1>Reset Password<span class="close-form">X</span></h1>
+                            <div class="popupform">
+                                <form class="rpassword">
+                                  <p>
+                                        <label>Password</label>
+                                        <input type="text" placeholder="Password" name="rpassword">
+                                        <input type="hidden" name="ruserid" >                                                              
+                                    </p>
+                                    <p class="submit-out"><input type="submit" class="input-submit" value="Reset Password"></p>
+                                        
+                                </form>
+                                </div>
+                        </div>
+                    </div>
+
+                <div class="popup-outr">
+                        <div class="popup-inner">
+                        <h1>Update User <span class="close-form">X</span></h1>
+                            <div class="popupform mCustomScrollbar1">
+                                <form class="updateUser">
+                                    <p>
+                                        <label>Name</label>
+                                        <input type="text" placeholder="Name" name="pname"></p>
+                                        <p>
+                                        <label>Role</label>
+                                        <select name="prole">
+                                                <option value="">Select user role</option>
+                                                <option value="ad">Admin</option>
+                                                <option value="m">Moderator</option>
+                                                 <option value="mr">Marketing</option>
+   
+                                                
+                                        </select></p>
+                                        <p>
+                                        <label>Username</label>
+                                        <input type="text" placeholder="Username" name="pusername" readonly=""></p>
+                                        <p>
+                                        <label>Password</label>
+                                        <input type="text" placeholder="Password" name="ppassword">
+                                        <input type="hidden" name="userid" >                                                              
+                                    </p>
+                                    <p class="submit-out"><input type="submit" class="input-submit" value="Update User"></p>
+                                        
+                                </form>
+                                </div>
+                        </div>
+                    </div>
+                 <div class="row  table-out-dash">
+                    <div class="box-dash">
+                        <h2 class="title-dash">Admin</h2>
+                          <div class="table-responsive mCustomScrollbar" data-mcs-theme="minimal" data-mcs-axis="yx">
+                            <table class="dash-table test-type-table">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Role</th>
+                                        <th>Username</th>
+                                     <!--   <th>Password</th> -->
+                                        <th>Password Reset</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+
+                                {{#each adminusers}}
+                                     <tr>
+                                        <td>{{profile.first_name}}</td>
+                                        <td>{{userrole profile.user_type}}</td>
+                                        <td>{{username}}</td>
+                                       <!-- <td></td>-->                                        
+                                        <td><a href="#"  id="{{_id}}" class="grey-text resetPassword"><i class="flaticon-power"></i></a></td>
+                                        <td><a href="#" id="{{_id}}" class="blue-text edit"><i class="flaticon-interface"></i></a>
+                                        <a href="#" id="{{_id}}" class="red-text delete"><i class="flaticon-close"></i></a></td>          
+                                     </tr>
+                                       
+                                {{/each}}
+                           
+                                    
+                                     
+                                </tbody>
+                            </table>
+                        </div>
+                   
+                    </div>
+                   </div>
+          
+                <div class="row  table-out-dash">
+                    <div class="box-dash">
+                        <h2 class="title-dash">Admin</h2>
+                            <div class="table-responsive">
+                                <form class="add-new-admin-form">
+                                    <input type="text" placeholder="Name" name="name">
+                                          <select name="role">
+                                                <option value="">Select user role</option>
+                                                <option value="ad">Admin</option>
+                                                <option value="m">Moderator</option>
+                                                 <option value="mr">Marketing</option>
+   
+                                                
+                                        </select>
+                                  
+                                    <input type="text" placeholder="Username" name="username">
+                                    <input type="text" placeholder="Password" name="password"> 
+                                    <p class="submit-out"><input type="submit" class="input-submit" value="Add Account"></p>
+                                </form>
+                            
+                            </div>
+                    </div>
+                </div>
+
+          </section>
+
+
+            <!-- dashboard right content section ends -->
+
+            <!-- footer starts -->
+            <footer class="admin-dash-footer">
+
+                <div class="copy-right">
+                    Copyright © 2016
+                </div>
+
+            </footer>
+            <!-- footer ends -->
+        </div>
+    </div>
+   <script>
+$(document).ready(function(){
+    $('.close-form').click(function(){
+      //  $(".mCustomScrollbar1").mCustomScrollbar("destroy");
+        $('.popup-outr').slideUp();
+     
+     /*   $(".mCustomScrollbar1").mCustomScrollbar({
+                    theme:"minimal",
+          
+                });*/
+    });
+});
+</script>
+
+            <script src="/js/jquery.mCustomScrollbar.concat.min.js"></script>
+            <script src="/js/pie.js"></script>
+            <script src="/js/light.js"></script>
+            <script src="/js/custom.js"></script>
+
+
+    </template>

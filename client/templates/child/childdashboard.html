@@ -1,0 +1,109 @@
+<template name="childdashboard"> 
+    <div class="container dashboard-container">
+        <div class="main-inner">
+            <!-- aside starts -->
+            {{ >childmenu }}
+            <!-- aside ends -->
+            <!-- dashboard right content section starts -->
+            <section class="right-section-dash mCustomScrollbar" data-mcs-theme="minimal">
+				<div class="row table-out-dash">
+                    <div class="box-dash">
+						<div class="user-detail-dash-out">
+							<div class="user-detail-out1">
+								<span class="image-user-dash-out">
+									<img src="images/user-image2.png">
+								</span>
+								<span class="name-user-dash-out">
+									{{userName}} <br> 
+									<span class="small-head">Shark - <b class="blue-text">Year 1</b></span>
+								</span>
+							</div>
+							<div class="earn-points">
+								You need 334 Points to earn <i class="flaticon-star"></i>
+							</div>
+							<div class="cert-box">
+								<a href="#"><i class="flaticon-game"></i></a>
+								<a href="#" class="star"><i class="flaticon-starred"></i></a>
+							</div>
+						</div>
+				  </div>
+                </div>
+                <div class="right-top-list row">
+                   {{# with getPointDetails }}
+                    <ul>
+                        <li>
+                         <div class="right-top-icon point-box">
+                                <div class="icon-postion">
+                                    <i class="flaticon-money"></i>
+                                </div>
+                            </div>
+                            <div class="right-top-data"><strong>{{point_earned}}</strong><span>Points </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="right-top-icon badges-box">
+                                <div class="icon-postion">
+                                    <i class="flaticon-other"></i>
+                                </div>
+                            </div>
+                            <div class="right-top-data"><strong>{{badges_earned}}</strong><span>Badges</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="right-top-icon certi-box">
+                                <div class="icon-postion">
+                                    <i class="flaticon-education"></i>
+                                </div>
+                            </div>
+                            <div class="right-top-data"><strong>{{certificates}}</strong><span>Certificates</span>
+                            </div>
+                        </li>
+                    </ul>
+                    {{/with}}
+                </div>
+                
+				<div class="row">
+                    <div class="box-dash  box-left">
+                        <h2 class="title-dash">
+									Proficiency earned at each Skills Level
+								</h2>
+                        <div id="skill-level-chart" ></div>
+                    </div>
+                    <div class="box-dash box-right">
+                        <h2 class="title-dash">Suggested Topics of Test</h2>
+                        <ul class="list-dash">
+                           {{{suggestedSkills}}}  
+                        </ul>
+                    </div>
+                </div>
+                <div class="row table-out-dash">
+                    <div class="box-dash start-test-out">
+						<h2>Start Test</h2>
+						<div class="list-buttons">
+							<ul>
+								<li><a href="#" class="point-box">10 minute Test</a></li>
+								<li><a href="#" class="badge-yellow">11 Plus</a></li>
+								<li><a href="#" class="certi-box">Full Exam</a></li>
+								<li><a href="#" class="incentive-box">Challenger</a></li>
+							</ul>
+						</div>
+				   </div>
+                </div>
+            </section>
+            <!-- dashboard right content section ends -->
+
+            <!-- footer starts -->
+            <footer class="admin-dash-footer">         
+                <div class="copy-right">
+                    Copyright © 2016
+                </div>
+            </footer>
+            <!-- footer ends -->
+        </div>
+    </div>
+    <script src="js/amcharts.js"></script>
+    <script src="js/pie.js"></script>
+    <script src="js/light.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+</template>

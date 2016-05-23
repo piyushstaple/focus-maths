@@ -1,0 +1,10 @@
+{
+  "galaxy.meteor.com": {
+    "env": {
+      "ROOT_URL": "http://www.focusmaths.com",
+      "MONGO_URL": "mongodb://admin:admin@ds015919.mlab.com:15919/k12"
+      
+   
+    }
+ 	}
+}

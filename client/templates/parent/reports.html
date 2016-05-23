@@ -1,0 +1,259 @@
+<template name="reports">
+ <div class="container dashboard-container">
+        <div class="main-inner">
+            <!-- aside starts -->
+            {{ >parentmenu }}
+            <!-- aside ends -->
+            <!-- dashboard right content section starts -->
+            <section class="right-section-dash mCustomScrollbar" data-mcs-theme="minimal">
+			
+			{{#with childData}}
+			
+				<div class="row table-out-dash">
+                    <div class="box-dash">
+						<div class="user-detail-dash-out parent-list-out">
+							<div class="user-detail-out1">
+								<span class="image-user-dash-out">
+									<img src="/images/user-image2.png">
+								</span>
+								<span class="name-user-dash-out">
+									{{first_name}} <br> 
+									<span class="small-head">{{last_name}}</span>
+								</span>
+							</div>
+                  
+							<ul class="parent-list">
+								<li><span class="parent-list-no water-green">23</span><p>Tests Completed</p></li>
+								<li><span class="parent-list-no yellow-text">295</span><p>Questions Answered</p></li>
+								<li><span class="parent-list-no orange-text">3:30</span><p>Time Spent</p></li>
+							</ul>
+						</div>
+				  </div>
+                </div>
+
+				
+                
+                
+				       <div class="row table-out-dash">
+                    <div class="box-dash">
+                        <h2 class="title-dash">
+									Top 3 strongest Skills and Weakest Skill
+								</h2>
+                        <div class="chart-boxes">
+							<div class="chart-skil-box">
+							<ul>
+								<li><h2>Strongest Skills </h2></li>
+								<li>Awareness</li>
+								<li>Time Management</li>
+								<li>Good Study Habits</li>
+							</ul>
+							<div id="strong-skill-chart"></div>								
+							</div>
+							<div class="chart-skil-box">
+							
+							<div id="weak-skill-chart"></div>
+<ul class="weakness">
+								<li><h2>Weakest Skills</h2></li>
+								<li>Reading Skills</li>
+								<li>Studying Outside</li>
+								<li>Using a Study Guide</li>
+							</ul>							
+							</div>
+						</div>
+                   
+				   </div>
+                </div>
+
+				
+				
+				
+				<div class="row table-out-dash">
+                    <div class="box-dash">
+						<div class="tabs">
+    <ul class="tab-links">
+        <li class="active"><a href="#tab-accuracy">Accuracy</a></li>
+        <li><a href="#tab-qus-ans">Questions Answered</a></li>
+        <li><a href="#tab-prof-chart">Procifiecny Chart</a></li>
+        <li><a href="#tab-hist-test">Historic Tests</a></li>
+    </ul>
+ 
+    <div class="tab-content">
+        <div id="tab-accuracy" class="tab active">
+           <form class="report-acc-form">
+							<h2>Select Year</h2>
+							<div class="label-outer">
+								<p><input type="checkbox"><label>Year 1</label></p>
+								<p><input type="checkbox"><label>Year 2</label></p>
+								<p><input type="checkbox"><label>Year 3</label></p>
+								<p><input type="checkbox"><label>Year 4</label></p>
+								<p><input type="checkbox"><label>Year 5</label></p>
+								<p><input type="checkbox"><label>Year 6</label></p>
+								<p><input type="checkbox"><label>All</label></p>
+							</div>
+							<h2>Reporting Period</h2>
+							<div class="label-outer">
+								<p><input type="checkbox"><label>1 month</label></p>
+								<p><input type="checkbox"><label>2 month</label></p>
+								<p><input type="checkbox"><label>3 month</label></p>
+								<p><input type="checkbox"><label>Half Year</label></p>
+								<p><input type="checkbox"><label>Full Year</label></p>
+								<p><input type="checkbox"><label>All</label></p>
+							</div>
+						</form>
+						 <div id="accurancy-chart"></div>	
+					
+        </div>
+ 
+        <div id="tab-qus-ans" class="tab">
+             	<form class="report-acc-form">
+							<h2>Select Year</h2>
+							<div class="label-outer">
+								<p><input type="checkbox"><label>Year 1</label></p>
+								<p><input type="checkbox"><label>Year 2</label></p>
+								<p><input type="checkbox"><label>Year 3</label></p>
+								<p><input type="checkbox"><label>Year 4</label></p>
+								<p><input type="checkbox"><label>Year 5</label></p>
+								<p><input type="checkbox"><label>Year 6</label></p>
+								<p><input type="checkbox"><label>All</label></p>
+							</div>
+							<h2>Reporting Period</h2>
+							<div class="label-outer">
+								<p><input type="checkbox"><label>1 month</label></p>
+								<p><input type="checkbox"><label>2 month</label></p>
+								<p><input type="checkbox"><label>3 month</label></p>
+								<p><input type="checkbox"><label>Half Year</label></p>
+								<p><input type="checkbox"><label>Full Year</label></p>
+								<p><input type="checkbox"><label>All</label></p>
+							</div>
+						</form>
+						 <div id="accurancy-chart"></div>	
+				
+        </div>
+ 
+        <div id="tab-prof-chart" class="tab">
+            	<form class="report-acc-form">
+							<h2>Select Year</h2>
+							<div class="label-outer">
+								<p><input type="checkbox"><label>Year 1</label></p>
+								<p><input type="checkbox"><label>Year 2</label></p>
+								<p><input type="checkbox"><label>Year 3</label></p>
+								<p><input type="checkbox"><label>Year 4</label></p>
+								<p><input type="checkbox"><label>Year 5</label></p>
+								<p><input type="checkbox"><label>Year 6</label></p>
+								<p><input type="checkbox"><label>All</label></p>
+							</div>
+							<h2>Reporting Period</h2>
+							<div class="label-outer">
+								<p><input type="checkbox"><label>1 month</label></p>
+								<p><input type="checkbox"><label>2 month</label></p>
+								<p><input type="checkbox"><label>3 month</label></p>
+								<p><input type="checkbox"><label>Half Year</label></p>
+								<p><input type="checkbox"><label>Full Year</label></p>
+								<p><input type="checkbox"><label>All</label></p>
+							</div>
+						</form>
+						 <div id="accurancy-chart"></div>	
+				
+        </div>
+ 
+        <div id="tab-hist-test" class="tab">
+             	     <div class="table-responsive mCustomScrollbar" data-mcs-theme="minimal" data-mcs-axis="yx">
+                            <table class="dash-table">
+                                <thead>
+                                    <tr>
+                                        <th>Test Name</th>
+                                        <th>Test Type</th>
+										<th>Category</th>
+                                        <th>Qs answered</th>
+                                        <th>Time Spent</th>
+                                        <th>Date Taken</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="blue-text"><a href="">Test 1</a></td>
+                                        <td>Lorem Ipsum</td>
+										<td>Math</td>
+										<td>44/100</td>
+										<td class="calender-icon-table"><i class="flaticon-days"></i> Feb 19, 2016 </td>
+                                        <td class="time-icon-table"><i class="flaticon-clock"></i> 30 min </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="blue-text"><a href="">Test 1</a></td>
+                                        <td>Lorem Ipsum</td>
+										<td>Math</td>
+										<td>44/100</td>
+										<td class="calender-icon-table"><i class="flaticon-days"></i> Feb 19, 2016 </td>
+                                        <td class="time-icon-table"><i class="flaticon-clock"></i> 30 min </td>
+                                    </tr>
+									<tr>
+                                        <td class="blue-text"><a href="">Test 1</a></td>
+                                        <td>Lorem Ipsum</td>
+										<td>Math</td>
+										<td>44/100</td>
+										<td class="calender-icon-table"><i class="flaticon-days"></i> Feb 19, 2016 </td>
+                                        <td class="time-icon-table"><i class="flaticon-clock"></i> 30 min </td>
+                                    </tr>
+									<tr>
+                                        <td class="blue-text"><a href="">Test 1</a></td>
+                                        <td>Lorem Ipsum</td>
+										<td>Math</td>
+										<td>44/100</td>
+										<td class="calender-icon-table"><i class="flaticon-days"></i> Feb 19, 2016 </td>
+                                        <td class="time-icon-table"><i class="flaticon-clock"></i> 30 min </td>
+                                    </tr>
+									<tr>
+                                        <td class="blue-text"><a href="">Test 1</a></td>
+                                        <td>Lorem Ipsum</td>
+										<td>Math</td>
+										<td>44/100</td>
+										<td class="calender-icon-table"><i class="flaticon-days"></i> Feb 19, 2016 </td>
+                                        <td class="time-icon-table"><i class="flaticon-clock"></i> 30 min </td>
+                                    </tr>
+									<tr>
+                                        <td class="blue-text"><a href="">Test 1</a></td>
+                                        <td>Lorem Ipsum</td>
+										<td>Math</td>
+										<td>44/100</td>
+										<td class="calender-icon-table"><i class="flaticon-days"></i> Feb 19, 2016 </td>
+                                        <td class="time-icon-table"><i class="flaticon-clock"></i> 30 min </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                   
+				
+				
+        </div>
+    </div>
+</div>
+						
+					
+					
+					
+                       
+                    </div>
+                </div>
+                {{/with}}
+            </section>
+            <!-- dashboard right content section ends -->
+
+            <!-- footer starts -->
+            <footer class="admin-dash-footer">
+                <div class="copy-right">
+                    Copyright © 2016
+                </div>
+            </footer>
+            <!-- footer ends -->
+        </div>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/amcharts.js"></script>
+	   <script src="js/pie.js"></script>
+    <script src="js/serial.js"></script>
+    <script src="js/light.js"></script>
+	<script src="https://www.amcharts.com/lib/3/themes/none.js"></script>
+    <script src="js/custom.js"></script>
+
+</template>    

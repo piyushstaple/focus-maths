@@ -1,0 +1,139 @@
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 14/03/2016 06:06
+    */
+
+    @font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+    .fi:before{
+        display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+    }
+
+    .flaticon-business:before { content: "\f100"; }
+.flaticon-business-1:before { content: "\f101"; }
+.flaticon-business-2:before { content: "\f102"; }
+.flaticon-calendar:before { content: "\f103"; }
+.flaticon-circle:before { content: "\f104"; }
+.flaticon-clock:before { content: "\f105"; }
+.flaticon-clock-1:before { content: "\f106"; }
+.flaticon-close:before { content: "\f107"; }
+.flaticon-computer:before { content: "\f108"; }
+.flaticon-days:before { content: "\f109"; }
+.flaticon-education:before { content: "\f10a"; }
+.flaticon-game:before { content: "\f10b"; }
+.flaticon-graphic:before { content: "\f10c"; }
+.flaticon-icon-59439:before { content: "\f10d"; }
+.flaticon-icon-8800:before { content: "\f10e"; }
+.flaticon-interface:before { content: "\f10f"; }
+.flaticon-money:before { content: "\f110"; }
+.flaticon-money-1:before { content: "\f111"; }
+.flaticon-money-2:before { content: "\f112"; }
+.flaticon-music:before { content: "\f113"; }
+.flaticon-other:before { content: "\f114"; }
+.flaticon-people:before { content: "\f115"; }
+.flaticon-people-1:before { content: "\f116"; }
+.flaticon-people-2:before { content: "\f117"; }
+.flaticon-people-3:before { content: "\f118"; }
+.flaticon-people-4:before { content: "\f119"; }
+.flaticon-people-5:before { content: "\f11a"; }
+.flaticon-people-6:before { content: "\f11b"; }
+.flaticon-power:before { content: "\f11c"; }
+.flaticon-ribbon:before { content: "\f11d"; }
+.flaticon-right:before { content: "\f11e"; }
+.flaticon-school:before { content: "\f11f"; }
+.flaticon-social:before { content: "\f120"; }
+.flaticon-social-1:before { content: "\f121"; }
+.flaticon-social-2:before { content: "\f122"; }
+.flaticon-social-3:before { content: "\f123"; }
+.flaticon-sound:before { content: "\f124"; }
+.flaticon-star:before { content: "\f125"; }
+.flaticon-starred:before { content: "\f126"; }
+.flaticon-student:before { content: "\f127"; }
+.flaticon-symbol:before { content: "\f128"; }
+.flaticon-symbol-1:before { content: "\f129"; }
+.flaticon-technology:before { content: "\f12a"; }
+.flaticon-three:before { content: "\f12b"; }
+.flaticon-tool:before { content: "\f12c"; }
+.flaticon-tool-1:before { content: "\f12d"; }
+.flaticon-tool-2:before { content: "\f12e"; }
+.flaticon-tool-3:before { content: "\f12f"; }
+.flaticon-two:before { content: "\f130"; }
+.flaticon-upload:before { content: "\f131"; }
+    
+    $font-Flaticon-business: "\f100";
+    $font-Flaticon-business-1: "\f101";
+    $font-Flaticon-business-2: "\f102";
+    $font-Flaticon-calendar: "\f103";
+    $font-Flaticon-circle: "\f104";
+    $font-Flaticon-clock: "\f105";
+    $font-Flaticon-clock-1: "\f106";
+    $font-Flaticon-close: "\f107";
+    $font-Flaticon-computer: "\f108";
+    $font-Flaticon-days: "\f109";
+    $font-Flaticon-education: "\f10a";
+    $font-Flaticon-game: "\f10b";
+    $font-Flaticon-graphic: "\f10c";
+    $font-Flaticon-icon-59439: "\f10d";
+    $font-Flaticon-icon-8800: "\f10e";
+    $font-Flaticon-interface: "\f10f";
+    $font-Flaticon-money: "\f110";
+    $font-Flaticon-money-1: "\f111";
+    $font-Flaticon-money-2: "\f112";
+    $font-Flaticon-music: "\f113";
+    $font-Flaticon-other: "\f114";
+    $font-Flaticon-people: "\f115";
+    $font-Flaticon-people-1: "\f116";
+    $font-Flaticon-people-2: "\f117";
+    $font-Flaticon-people-3: "\f118";
+    $font-Flaticon-people-4: "\f119";
+    $font-Flaticon-people-5: "\f11a";
+    $font-Flaticon-people-6: "\f11b";
+    $font-Flaticon-power: "\f11c";
+    $font-Flaticon-ribbon: "\f11d";
+    $font-Flaticon-right: "\f11e";
+    $font-Flaticon-school: "\f11f";
+    $font-Flaticon-social: "\f120";
+    $font-Flaticon-social-1: "\f121";
+    $font-Flaticon-social-2: "\f122";
+    $font-Flaticon-social-3: "\f123";
+    $font-Flaticon-sound: "\f124";
+    $font-Flaticon-star: "\f125";
+    $font-Flaticon-starred: "\f126";
+    $font-Flaticon-student: "\f127";
+    $font-Flaticon-symbol: "\f128";
+    $font-Flaticon-symbol-1: "\f129";
+    $font-Flaticon-technology: "\f12a";
+    $font-Flaticon-three: "\f12b";
+    $font-Flaticon-tool: "\f12c";
+    $font-Flaticon-tool-1: "\f12d";
+    $font-Flaticon-tool-2: "\f12e";
+    $font-Flaticon-tool-3: "\f12f";
+    $font-Flaticon-two: "\f130";
+    $font-Flaticon-upload: "\f131";

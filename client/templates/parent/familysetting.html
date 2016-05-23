@@ -1,0 +1,152 @@
+<template name="familysetting">
+<div class="container dashboard-container">
+			<div class="main-inner">
+				<!-- aside starts -->
+				{{ > parentmenu }}
+				<!-- aside ends -->
+				<!-- dashboard right content section starts -->
+					
+					<section class="right-section-dash mCustomScrollbar"  data-mcs-theme="minimal">
+
+					    <div class="popup-outr resetpass-popup">
+                        <div class="popup-inner">
+                        <h1>Reset Password<span class="close-form">X</span></h1>
+                            <div class="popupform">
+                                <form class="rpassword">
+                                  <p>
+                                        <label>Password</label>
+                                        <input type="text" placeholder="Password" name="rpassword">
+                                        <input type="hidden" name="ruserid" >                                                              
+                                    </p>
+                                    <p class="submit-out"><input type="submit" class="input-submit" value="Reset Password"></p>
+                                      <p class="submit-out"><a href="#" class="orange-btn resetcancel">Cancel</a></p>    
+                                </form>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="popup-outr update-user">
+                        <div class="popup-inner">
+                        <h1>Update User <span class="close-form">X</span></h1>
+                            <div class="popupform mCustomScrollbar1">
+                                <form class="updateUser">
+                                    <p>
+                                        <label>First Name</label>
+                                        <input type="text" placeholder="First Name" name="fname"></p>
+                                   
+                                    <p>
+                                        <label>Last Name</label>
+                                        <input type="text" placeholder="Last Name" name="lname"></p>
+                                    <p>
+                                        <label>Date Of Birth</label>
+                                         <input type="text" placeholder="mm/dd/yyyy" class="input-width date-picker-input" name="dobpop" id="dobpop">
+                                      
+                                        <input type="hidden" name="userid" >                                                              
+                                    </p>
+                                    <p class="submit-out"><input type="submit" class="input-submit" value="Update User"></p>
+                                     <p class="submit-out"><a href="#" class="orange-btn canceluser">Cancel</a></p>
+                                        
+                                </form>
+                                </div>
+                        </div>
+                    </div>
+
+							<div class="row table-out-dash">
+							<div class="box-dash">
+								<h2 class="title-dash">
+									Family Settings 
+								</h2>
+								<div class="table-responsive mCustomScrollbar" data-mcs-theme="minimal" data-mcs-axis="yx">
+									<table class="dash-table" >
+									<thead>
+										<tr>		
+											<th>Child Name</th>
+											<th>Date of Birth</th>
+											<th>Username</th>
+											<th>Password</th>
+											<th>Subscribed</th>
+											<th>Actions</th>
+										</tr>
+									</thead>
+									<tbody>
+
+									{{# each childs}}
+										<tr>		
+											<td class="blue-text"><a href="/reports">{{profile.first_name}} {{profile.last_name}}</a></td>
+											<td class="calender-icon-table">{{profile.dob}} </td>
+											<td>{{username}}</td>
+											<td>{{ reterivePassword profile.encyptpasswprd }} <a href="#" class="blue-text reset" id="{{_id}}">Reset</a></td>
+											<td>Subscribed</td>
+											<td><a href="#" class="edit" id="{{_id}}">Amend</a> <a href="#" class="removeusers" id="{{_id}}">Delete</a></td>
+										</tr>
+									{{/each}}	
+									
+									</tbody>
+									</table>
+									
+								</div>
+							</div>					
+						</div>
+						     <div class="row table-out-dash">
+                    <div class="box-dash new-member-box">
+                       {{{nochildMessage}}}
+                        <h3 class="title-h3">
+									Add a child account
+								</h3>
+                        <form class="new-member-add-form add-child-acc">
+						
+						<p>
+
+							<label>First Name</label>
+                            <input type="text"  class="input-width" name="firstname">
+						
+							</p>
+							<p>
+							<label>Last Name</label>
+                            <input type="text"  class="input-width" name="lastname">
+							</p>
+							<p>
+                            <label>Date of Birth</label>
+                            <input type="text" placeholder="mm/dd/yyyy" class="input-width date-picker-input" name="dob" id="dob">
+							</p>
+							<p>
+							<label></label>
+                            <input type="submit" value="Add Account" id="addaccount" class="input-submit">
+							</p>
+                        </form>
+                    </div>
+                </div>
+       
+				
+					</section>
+				
+				
+				<!-- dashboard right content section ends -->
+			
+				<!-- footer starts -->
+					<footer class="admin-dash-footer">
+						
+						<div class="copy-right">
+							Copyright © 2016
+						</div>
+						
+					</footer>
+				<!-- footer ends -->			
+			</div>
+		</div>  
+	
+			<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+			<script src="js/amcharts.js"></script>
+			<script src="js/serial.js"></script>
+			<script src="js/light.js"></script>
+			<script src="js/custom.js"></script>
+
+   <script>
+$(document).ready(function(){
+    $('.close-form').click(function(){
+        $('.popup-outr').slideUp();
+     
+        });
+});
+</script>
+</template>			

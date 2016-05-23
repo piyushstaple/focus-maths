@@ -1,0 +1,79 @@
+<template name="stripepayment">
+<div class="container dashboard-container">
+			<div class="main-inner">
+				<!-- aside starts -->
+				{{ > parentmenu }}
+				<!-- aside ends -->
+				<!-- dashboard right content section starts -->
+					
+					<section class="right-section-dash mCustomScrollbar"  data-mcs-theme="minimal">
+							<div class="row table-out-dash">
+							<div class="box-dash">
+								<h2 class="title-dash">
+									Family Settings 
+								</h2>
+								<div class="table-responsive mCustomScrollbar" data-mcs-theme="minimal" data-mcs-axis="yx">
+								<form action="" method="POST" id="payment-form" class="paymentform">
+								  <span class="payment-errors"></span>
+
+									  <div class="form-row">
+									    <label>
+									      <span>Card Number</span>
+									      <input type="text" size="20" data-stripe="number" id="ccnum"/>
+									    </label>
+									  </div>
+
+									  <div class="form-row">
+									    <label>
+									      <span>CVC</span>
+									      <input type="text" size="4" data-stripe="cvc" id="cvc"/>
+									    </label>
+									  </div>
+
+									   <div class="form-row">
+									    <label>
+									      <span>Coupan</span>
+									      <input type="text" size="4" data-stripe="coupan" id="coupan"/>
+									    </label>
+									  </div> 
+
+									  <div class="form-row">
+									    <label>
+									      <span>Expiration (MM/YYYY)</span>
+									      <input type="text" size="2" data-stripe="exp-month" id="exp-month"/>
+									    </label>
+									    <span> / </span>
+									    <input type="text" size="4" data-stripe="exp-year" id="exp-year"/>
+									  </div>
+
+									  <button type="submit">Submit Payment</button>
+									</form>
+																	</div>
+								
+							</div>					
+						</div>
+						
+					</section>
+				
+				
+				<!-- dashboard right content section ends -->
+			
+				<!-- footer starts -->
+					<footer class="admin-dash-footer">
+						
+						<div class="copy-right">
+							Copyright © 2016
+						</div>
+						
+					</footer>
+				<!-- footer ends -->			
+			</div>
+		</div>  
+	
+			<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+			<script src="js/amcharts.js"></script>
+			<script src="js/serial.js"></script>
+			<script src="js/light.js"></script>
+			<script src="js/custom.js"></script>
+
+</template>			

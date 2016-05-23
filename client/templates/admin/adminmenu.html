@@ -1,0 +1,25 @@
+ <template name="adminmenu">
+ <aside class="dashboard-aside">
+                <div class="dashboard-logo">
+                    <a href="index.html"><img src="/images/dashboard-logo.png">
+                    </a>
+                </div>
+                <div class="user-detail-dash">
+                    <div class="user-detail-out"><span class="image-user-dash">
+                        <img src="/images/user-image1.png">
+                        </span>
+                        <span class="name-user-dash">
+                        {{ userName }}
+                        </span>
+                    </div>
+                    <div class="menu-icon"><img src="/images/menu-icon.png">
+                    </div>
+                </div>
+
+                <ul class="dashboard-nav">
+                   {{{menus}}}
+                </ul>
+            </aside>
+
+
+</template>            

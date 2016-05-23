@@ -1,0 +1,43 @@
+<template name="addquestion">
+
+	<form class="add_question">
+
+	<textarea id="question" name="question">
+	</textarea>
+	<br/>
+	<p><input type="text" name="type" placeholder="Type"></p>
+
+<br/>
+	<p><input type="text" name="year" placeholder="Year"></p>
+<br/>
+	<p>
+		<select name="skill">
+			<option>Select Skill</option>	
+			<option>Addition</option>	
+			<option>Mutiplication</option>	
+			<option>Alzebra</option>	
+		</select>
+	</p>
+
+
+<br/>
+	<p><input type="text" name="correctanswer" placeholder="correctAnswer"></p>
+		<br/><br/>
+	<p>Add Answer Options</p>
+
+	<p><input type="text" name="option" placeholder="option1"></p>
+	<p><input type="text" name="option" placeholder="option2"></p>
+	<div id="morequestions">
+
+	</div>
+
+	<button id="add_more">Add more options</button>
+	<br/><br/>
+	<input type="submit" value="add question"/>
+
+	</form>
+
+
+
+
+</template>

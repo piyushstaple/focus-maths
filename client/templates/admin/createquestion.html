@@ -1,0 +1,161 @@
+<template name="createquestion">
+ <div class="container dashboard-container">
+        <div class="main-inner">
+            <!-- aside starts -->
+         	{{ >adminmenu }}
+            <!-- aside ends -->
+            <!-- dashboard right content section starts -->
+            <section class="right-section-dash mCustomScrollbar" data-mcs-theme="minimal">
+
+            	<div class="popup-outr">
+						<div class="popup-inner">
+						<h1>Login <span class="close-form">X</span></h1>
+							<div class="popupform" data-mcs-theme="minimal">
+								<form class="add_field">
+								
+									<p>
+											<label>Year Group</label>
+											<input type="text" name="field_value" id="field_value" >
+											
+											
+										</p>
+
+									
+										<input type="hidden" id="field_type" name="field_type" value="">
+										<p><input type="Submit" class="input-submit" value="Submit"></p>
+								</form>
+								</div>
+						</div>
+					</div>
+
+					   <div class="row table-out-dash">
+             
+                    <div class="box-dash">
+                        <div class="create-qus-form test-type-form">
+							<form class="create_question">
+								<h2>
+									Create New Question
+								</h2>
+								<p>
+									<label>Year Group</label> 
+									<input name="year_group" class="form-control typeahead" >
+									<a href="#" id="add_new_year" class="blue-text add-new-testlink">Add New</a>
+								</p>
+								<p class="pull-right">
+									<label>Strand</label>
+									<input type="text" name="strand" > 
+									<!--<select name="strand">
+
+										{{{reteriveField "strand"}}}									
+									</select>-->
+									<a href="#" id="strand" class="blue-text add-new-testlink">Add New</a>
+								</p>
+								<p>
+								<label>Type of Test</label>
+								<select name="type_of_test" multiple="">
+								{{{testType}}}
+								</select>
+								
+								<!--	<a href="#" id="add_test_type" class="blue-text add-new-testlink">Add New</a>-->
+								
+								</p>
+								<p class="pull-right">
+									<label>Skill</label>
+									<!--<select name="skill">
+						     			{{{reteriveField "skill"}}}
+									</select>-->
+
+										<input type="text" name="skill" />
+
+									<a href="#" id="add_skill" class="blue-text add-new-testlink">Add New</a>
+								</p>
+								
+								
+								<p class="full-width-p"><label>Difficulty Levels</label>{{{reteriveField "difficuly_level"}}}
+								<!--	<a href="#" id="add_difficulty" class="blue-text add-new-testlink">Add New</a>-->
+								
+								</p>	
+							
+								
+							
+								<!-- <div class="editor-outer" name="question">
+						
+								</div>-->
+
+								<p class="full-width-p"> <label>Question</label> <textarea name="question"> </textarea> </p>
+								
+								<h2>
+									Answer Types
+								</h2>
+									<div class="ans-typ-out">
+									
+									<p><input type="radio" class="checkbtn-radiobtn" name="answer_type" value="SC">
+									<span>Single Choice</span></p>
+									
+									<p><input type="radio" class="checkbtn-radiobtn" name="answer_type" value="MC">
+									<span>Multiple Choice</span></p>
+									
+									<p><input type="radio" class="checkbtn-radiobtn" name="answer_type" value="FIB">
+									<span>Fill in the Blanks</span></p>
+									
+									<p><input type="radio" class="checkbtn-radiobtn" name="answer_type" value="SORT">
+									<span>Sort</span></p>
+									
+									<p><input type="radio" class="checkbtn-radiobtn" name="answer_type" value="MATCH">
+									<span>Match</span></p>
+									
+									<p><input type="radio" class="checkbtn-radiobtn" name="answer_type" value="OE">
+									<span>Open End</span></p>
+									
+									
+								</div>
+								<div class="answer-outer">
+									<div class="answer-inner">
+										<div class="ans-point"><span>Answer</span><input type="text" placeholder="Points" name="points"></div>
+
+
+										<p><span>a.</span><input type="text" name="option1"><input type="checkbox" name="option_check" value="0"></p>
+										<p><span>b.</span><input type="text" name="option2"><input type="checkbox" name="option_check" value="1"></p>
+										<p><span>c.</span><input type="text" name="option3"><input type="checkbox" name="option_check" value="2"></p>
+										<p><span>d.</span><input type="text" name="option4"><input type="checkbox" name="option_check" value="3"></p>
+									</div>
+								</div>
+								
+								<p class="submit-out"><input type="submit" class="input-submit" value="Add Question" style="float:right;"></p>
+								</form>
+						</div>
+						</div>
+                    </div>
+             </section>
+
+
+            <!-- dashboard right content section ends -->
+
+            <!-- footer starts -->
+            <footer class="admin-dash-footer">
+
+                <div class="copy-right">
+                    Copyright © 2016
+                </div>
+
+            </footer>
+
+            <!-- footer ends -->
+        </div>
+    </div>
+
+<script>
+$(document).ready(function(){
+	$('.close-form').click(function(){
+		$('.popup-outr').slideUp();
+	});
+});
+</script>
+
+			<script src="/js/jquery.mCustomScrollbar.concat.min.js"></script>
+			<script src="/js/pie.js"></script>
+			<script src="/js/light.js"></script>
+			<script src="/js/custom.js"></script>
+			<script src="/js/jquery-ui.js"></script>
+   
+</template>

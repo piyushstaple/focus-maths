@@ -1,0 +1,142 @@
+<template name="profile">  
+  <div class="container dashboard-container">
+        <div class="main-inner">
+            <!-- aside starts -->
+
+            {{#if checkUserTypeAdmin}}
+            	{{ >adminmenu }}
+
+         	{{else}}
+
+         		{{#if checkUserType}}
+
+         			{{ > parentmenu }}
+
+         		{{else}}
+
+         			{{ >childmenu }}
+
+         		{{/if}}
+
+         	{{/if}}
+            <!-- aside ends -->
+            <!-- dashboard right content section starts -->
+            <section class="right-section-dash mCustomScrollbar" data-mcs-theme="minimal">
+				 <div class="row table-out-dash">
+                    <div class="box-dash">
+                        <div class="table-responsive">
+                        <div id="message"></div>
+							<form class="edit-profile-out">
+							
+							
+							<div class="edit-user-img-outr">
+								<div class="edit-user-img">
+									<img src="images/edit-profile-img.png">
+									<a href="#" class="edit-img"><img src="images/profi-edit-pic.png"></a>
+								</div>
+								<p class="usr-nm">
+								<input type="text" placeholder="Anna">
+										<span class="nm">Anna</span>
+										<span class="edit-icons"><i class="flaticon-tool-3"></i></span>
+										
+									</p>
+							</div>
+														
+							<div class="outer">
+
+
+							{{#with profileData}}
+							
+								
+								<div class="prof-edit-name prof-box">
+									{{#if isChild }}
+									<p>
+										<label>Username/Email:</label>
+									
+											<input type="text" name="username" readonly="" value="{{username}}">	
+									</p>
+									<p>
+										<label>First Name:</label>
+									
+										<input type="text" name="firstname" value="{{profile.first_name}}" readonly="" >
+										
+									</p>
+									<p>
+										<label>Last Name:</label>
+										
+										<input type="text" name="lastname" value="{{profile.last_name}}" readonly="">
+										
+									</p>
+
+									{{else}}
+	
+									<p>
+										<label>Username/Email:</label>
+									
+											<input type="email" name="email" readonly="" value="{{profile.email}}">	
+									</p>
+					
+									<p>
+										<label>First Name:</label>
+									
+										<input type="text" name="firstname" value="{{profile.first_name}}" >
+										
+									</p>
+									<p>
+										<label>Last Name:</label>
+										
+										<input type="text" name="lastname" value="{{profile.last_name}}">
+										
+									</p>
+								
+									<p class="error-p">
+										<label>Password:</label>
+										
+										<input type="password" name="password" id="password">
+										<label id="password-error" class="error" for="password"></label>
+									</p>
+									<p class="error-p">
+										<label>Confirm Password:</label>
+										
+										<input type="password" name="cpassword">
+										<label id="cpassword-error" class="error" for="cpassword"></label>
+									</p>
+							{{/if}}
+								</div>
+								
+						{{/with}}		
+								</div>
+						{{#if isChild }}
+
+						{{else}}
+		
+								<div class="profile-edit-btn">
+								<input class="blue-btn" type="submit" value="Update">
+								<a href="#" class="orange-btn">Cancel</a>
+							</div>
+						{{/if}}	
+							</form>	
+						</div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- dashboard right content section ends -->
+
+            <!-- footer starts -->
+            <footer class="admin-dash-footer">
+
+                <div class="copy-right">
+                    Copyright © 2016
+                </div>
+
+            </footer>
+            <!-- footer ends -->
+        </div>
+    </div>
+   			<script src="/js/jquery.mCustomScrollbar.concat.min.js"></script>
+			<script src="/js/pie.js"></script>
+			<script src="/js/light.js"></script>
+			<script src="/js/custom.js"></script> 
+</template>    

@@ -1,0 +1,104 @@
+<template name="admindashboard">
+    <div class="container dashboard-container">
+        <div class="main-inner">
+            <!-- aside starts -->
+         {{> adminmenu }}
+            <!-- aside ends -->
+            <!-- dashboard right content section starts -->
+           <section class="right-section-dash mCustomScrollbar" data-mcs-theme="minimal">
+                <div class="right-top-list row">
+                    <ul class="admin-list-top">
+                        <li>
+                            <div class="right-top-icon point-box">
+                                <div class="icon-postion">
+                                    <i class="flaticon-people"></i>
+                                </div>
+                            </div>
+                            <div class="right-top-data"><strong>45</strong><span>Total Parent 
+Accounts</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="right-top-icon badges-box">
+                                <div class="icon-postion">
+                                    <i class="flaticon-people-2"></i>
+                                </div>
+                            </div>
+                            <div class="right-top-data"><strong>25</strong><span>Total Free 
+Child Accounts</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="right-top-icon certi-box">
+                                <div class="icon-postion">
+                                    <i class="flaticon-money-1"></i>
+                                </div>
+                            </div>
+                            <div class="right-top-data"><strong>9</strong><span>Total Paid 
+Child Accounts</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="right-top-icon incentive-box">
+                                <div class="icon-postion">
+                                    <i class="flaticon-business-2"></i>
+                                </div>
+                            </div>
+                            <div class="right-top-data"><strong>75</strong><span>Total Inactive 
+Members</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="row table-out-dash">
+                    <div class="box-dash new-member-box">
+                        <h3 class="title-h3">
+                                    New Members
+                                </h3>
+                        <form class="new-member-add-form">
+                            <div class="form-input">
+                                <label>From</label>
+                                <input type="text" placeholder="dd/mm/yyyy" class="date-picker-input">
+                                <label>To</label>
+                                <input type="text" placeholder="dd/mm/yyyy" class="date-picker-input">
+                            </div>
+                            <div class="form-input">
+                                <label>Interval</label>
+                                <input type="text" class="interval-input">
+                                <input type="submit" value="Apply" class="input-submit">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row table-out-dash">
+                    <div class="box-dash map-main-outer">
+                        <div class="map-outer">
+                            <div id="admin-dash-map"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- dashboard right content section ends -->
+
+            <!-- footer starts -->
+            <footer class="admin-dash-footer">
+
+                <div class="copy-right">
+                    Copyright © 2016
+                </div>
+
+            </footer>
+            <!-- footer ends -->
+        </div>
+    </div>
+
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/amcharts.js"></script>
+    <script src="js/serial.js"></script>
+    <script src="js/light.js"></script>
+    <script src="js/custom.js"></script>
+
+</template> 

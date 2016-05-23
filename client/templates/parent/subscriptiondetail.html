@@ -1,0 +1,101 @@
+<template name="subscriptiondetail">
+  <div class="container dashboard-container">
+        <div class="main-inner">
+            <!-- aside starts -->
+            {{ > parentmenu }}	
+            <!-- aside ends -->
+            <!-- dashboard right content section starts -->
+            <section class="right-section-dash mCustomScrollbar" data-mcs-theme="minimal">
+				 <div class="row table-out-dash">
+                    <div class="box-dash">
+                        <h2 class="title-dash">
+							Purchase a Premium Membership Plan
+						</h2>
+                        <div class="table-responsive">
+								<div class="feature-premium">
+								<h4>
+									Features of the Premium Plan
+								</h4>
+								<p>
+									Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+									totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+									Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui 
+									ratione <a href="" class="blue-text">voluptatem sequi nesciunt. Neque porro quisquam est, qui</a> dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
+									sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, 
+									quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? <a href=""  class="blue-text">Quis autem vel</a> eum iure 
+									reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, 
+									vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+								</p>
+								</div>
+								<div class="premium-right">
+								<h4>
+									Add children to the premium membership plan
+								</h4>
+								
+								<div class="child-nam">
+								<p>
+								<label>Child 1 Name</label>
+								<label>Subscribed</label>
+								<label>Child 1 Name</label>
+								<input type="checkbox">
+								</p>
+								
+							
+								</div>
+								<h3 class="pricing">Pricing - £19.99 per Annum per Child</h3>
+								<h5>
+									Your Billing Details
+								</h5>
+								<p><input type="text" placeholder="First Name"><input type="text" placeholder="Last Name"></p>
+								<p><input type="text" placeholder="Address 1"><input type="text" placeholder="Address 2"></p>
+								<p><input type="text" placeholder="Address 3"><input type="text" placeholder="Post Code"></p>	
+								<h5>
+									Payment Information
+								</h5>
+									<p class="payment-fileds"><label>Amount</label><input type="text" placeholder="#####"><label>Coupon</label><input type="text"><input type="submit" class="apply-submit" value="Apply"></p>
+									
+									<p class="acc-img"><a href="#"><img src="images/acc-img.png"></a></p>
+									<p class="card-no"><label>Card Number</label><input type="text" placeholder="XXXX-XXXX-XXXX-XXXX" name="cardno" class="cardno">	</p>
+									<p class="expry-no">	<label>Expiry</label><select>
+									{{{expiryMonths}}}
+									</select>
+									<select>
+										{{{expiryYears}}}
+									</select>
+									<label style="text-align:right;">
+									CVV
+									</label>
+									<input type="text" class="cvv-no">
+									
+									
+									</p>									
+									<p style="text-align:center;"><input type="submit" class="input-submit" value="Submit & Checkout"></p>
+								</div>
+						</div>
+                   
+				   </div>
+                </div>
+            </section>
+
+
+            <!-- dashboard right content section ends -->
+
+            <!-- footer starts -->
+            <footer class="admin-dash-footer">
+
+                <div class="copy-right">
+                    Copyright © 2016
+                </div>
+
+            </footer>
+            <!-- footer ends -->
+        </div>
+    </div>
+
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/amcharts.js"></script>
+    <script src="js/serial.js"></script>
+    <script src="js/light.js"></script>
+    <script src="js/custom.js"></script>
+
+    </template>

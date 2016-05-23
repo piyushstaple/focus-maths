@@ -1,0 +1,180 @@
+<template name="editquestion">
+ <div class="container dashboard-container">
+        <div class="main-inner">
+            <!-- aside starts -->
+         	{{ >adminmenu }}
+            <!-- aside ends -->
+            <!-- dashboard right content section starts -->
+            <section class="right-section-dash mCustomScrollbar" data-mcs-theme="minimal">
+
+
+            	<div class="popup-outr">
+						<div class="popup-inner">
+						<h1>Login <span class="close-form">X</span></h1>
+							<div>
+								<form class="add_field">
+								
+									<p>
+											<label>Year Group</label>
+											<input type="text" name="field_value" id="field_value">
+											
+											
+										</p>
+										<input type="hidden" id="field_type" name="field_type" value="">
+										<p><input type="Submit" class="input-submit" value="Submit"></p>
+								</form>
+								</div>
+						</div>
+					</div>
+
+					   <div class="row table-out-dash">
+        
+                    <div class="box-dash">
+                        <div class="create-qus-form test-type-form">
+							<form class="edit_question">
+								<h2>
+									Edit Question
+								
+								</h2>
+						{{#with questionDetails}}		
+					
+							<p>
+									<label>Year Group</label>
+
+									<input type="text" name="year_group" value="{{year_group}}">
+						
+								<!--	<select name="year_group">
+										{{{reteriveField "year" year_group}}}
+									</select> -->
+
+								<a href="#" id="add_new_year" class="blue-text add-new-testlink">Add New</a>
+							</p>
+								<p class="pull-right">
+									<label>Strand</label>
+
+								<!--	<select name="strand">
+										{{{reteriveField "strand" strand}}}	
+									</select> -->
+
+									<input type="text" name="strand" value="{{strand}}">	
+
+									<a href="#" id="strand" class="blue-text add-new-testlink">Add New</a>
+								</p>
+								<p>
+								<label>Type of Test</label>
+								
+								<select name="type_of_test" multiple="">
+										{{{testType  type_of_test}}}
+								</select>
+	
+								
+								<!--	<a href="#" id="add_test_type" class="blue-text add-new-testlink">Add New</a> -->
+								</p>
+								<p class="pull-right">
+									<label>Skill</label>
+
+								<!--	
+									<select name="skill">
+										{{{reteriveField "skill" skill}}}
+									</select>
+								-->
+
+									<input type="text" name="skill" value="{{skill}}" >
+
+									<a id="add_skill" href="#" class="blue-text add-new-testlink">Add New</a>
+								</p>
+								
+								
+								<p class="full-width-p"><label>Difficulty Levels</label>{{{reteriveField "difficuly_level" difficulty_level}}}
+								
+									<!--	<a href="#" id="add_difficulty" class="blue-text add-new-testlink">Add New</a>-->
+								
+								</p>	
+							
+							
+							
+								<!-- <div class="editor-outer" name="question">
+						
+								</div> -->
+								<p class="full-width-p"> <label>Question</label> <textarea name="question"> {{ question}} </textarea> </p>
+
+								<h2>
+									Answer Types
+								</h2>
+									<div class="ans-typ-out">
+									
+									<p><input type="radio" class="checkbtn-radiobtn" name="answer_type" value="1" {{ checkchecked 1 answer_type }} >
+									<span>Single Choice</span></p>
+									
+									<p><input type="radio" class="checkbtn-radiobtn" name="answer_type" value="2" {{ checkchecked 2 answer_type }} >
+									<span>Multiple Choice</span></p>
+									
+									<p><input type="radio" class="checkbtn-radiobtn" name="answer_type" value="3" {{ checkchecked 3 answer_type }}>
+									<span>Fill in the Blanks</span></p>
+									
+									<p><input type="radio" class="checkbtn-radiobtn" name="answer_type" value="4" {{ checkchecked 4 answer_type }}>
+									<span>Sort</span></p>
+									
+									<p><input type="radio" class="checkbtn-radiobtn" name="answer_type" value="5" {{ checkchecked 5 answer_type }}>
+									<span>Match</span></p>
+									
+									<p><input type="radio" class="checkbtn-radiobtn" name="answer_type" value="6" {{ checkchecked 6 answer_type }}>
+									<span>Open End</span></p>
+									
+									
+								</div>
+								<div class="answer-outer">
+									<div class="answer-inner">
+										<div class="ans-point"><span>Answer</span><input type="text" placeholder="Points" name="points" value="{{points}}"></div>
+									{{{ questionOpts options answer}}}
+									</div>
+								</div>
+
+							{{/with}}	
+								
+								<p class="submit-out"><input type="submit" class="input-submit" value="Update Question" style="float:right;"></p>
+								</form>
+						</div>
+						</div>
+                    </div>
+             </section>
+
+
+            <!-- dashboard right content section ends -->
+
+            <!-- footer starts -->
+            <footer class="admin-dash-footer">
+
+                <div class="copy-right">
+                    Copyright © 2016
+                </div>
+
+            </footer>
+
+            <!-- footer ends -->
+        </div>
+    </div>
+  
+
+
+<script>
+$(document).ready(function(){
+	$('.close-form').click(function(){
+		$('.popup-outr').slideUp();
+	});
+});
+</script>
+<script src="/js/jquery.mCustomScrollbar.concat.min.js"></script>
+			<script src="/js/pie.js"></script>
+			<script src="/js/light.js"></script>
+			<script src="/js/custom.js"></script>
+			<script src="/js/jquery-ui.js"></script>
+
+
+   
+</template>
+
+
+<template name="yearField">
+  
+</template>

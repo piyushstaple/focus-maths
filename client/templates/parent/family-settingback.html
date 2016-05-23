@@ -1,0 +1,85 @@
+<template name="familysettingback">
+<div class="container dashboard-container">
+			<div class="main-inner">
+				<!-- aside starts -->
+				{{ > parentmenu }}
+				<!-- aside ends -->
+				<!-- dashboard right content section starts -->
+					
+					<section class="right-section-dash mCustomScrollbar"  data-mcs-theme="minimal">
+							<div class="row table-out-dash">
+							<div class="box-dash">
+								<h2 class="title-dash">
+									Family Settings 
+								</h2>
+								<div class="table-responsive mCustomScrollbar" data-mcs-theme="minimal" data-mcs-axis="yx">
+									<table class="dash-table" >
+									<thead>
+										<tr>		
+											<th>Child Name</th>
+											<th>Date of Birth</th>
+											<th>Username</th>
+											<th>Password</th>
+											<th>Subscribed</th>
+											<th>Actions</th>
+										</tr>
+									</thead>
+									<tbody>
+
+									{{# each childs}}
+										<tr>		
+											<td class="blue-text"><a href="">{{profile.first_name}}</a></td>
+											<td class="calender-icon-table"><i class="flaticon-days"></i>{{profile.date_of_birth}}</td>
+											<td>{{username}}</td>
+											<td><span class="word-wrap">{{password}}</span><a href="#" class="blue-text">Reset</a></td>
+											<td>Subscribed</td>
+											<td><a href="#" class="red-text removeusers" id="{{_id}}">Remove</a></td>
+										</tr>
+									
+									{{/each }}	
+									</tbody>
+									</table>
+									{{# if prevPage}}
+											<a href="/familysetting/?page={{prevPage}}">Prev</a>
+									{{else}}
+											<a>Prev</a>
+									{{/if}}
+									
+									{{# each PaginationObject}}
+										<a href="/familysetting/?page={{index}}">{{index}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+									{{/each}}
+									
+									{{# if nextPage }}
+										<a href="/familysetting/?page={{nextPage}}">Next</a>
+									{{else}}
+										<a>Next</a>
+									{{/if}}	
+								</div>
+								
+							</div>					
+						</div>
+						
+					</section>
+				
+				
+				<!-- dashboard right content section ends -->
+			
+				<!-- footer starts -->
+					<footer class="admin-dash-footer">
+						
+						<div class="copy-right">
+							Copyright © 2016
+						</div>
+						
+					</footer>
+				<!-- footer ends -->			
+			</div>
+		</div>  
+	
+			<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+			<script src="js/amcharts.js"></script>
+			<script src="js/serial.js"></script>
+			<script src="js/light.js"></script>
+			<script src="js/custom.js"></script>
+
+</template>			

@@ -1,0 +1,77 @@
+<template name="edittest">
+ <div class="container dashboard-container">
+        <div class="main-inner">
+            <!-- aside starts -->
+           	{{ >adminmenu }}
+            <!-- aside ends -->
+            <!-- dashboard right content section starts -->
+            <section class="right-section-dash mCustomScrollbar" data-mcs-theme="minimal">
+					   <div class="row table-out-dash">
+             
+                    <div class="box-dash">
+                        <h2 class="title-dash">Edit Type of Test</h2>
+                        <div class="test-type-form">
+							<form class="editT">
+                          {{#with testDetails}} 
+
+								<p><label>Test Name</label><select name="testname" class="testname">
+                          			{{{reteriveField "testname" testname}}}
+                          		</select></p>
+								<p><label>Questions Randomised</label><input type="radio" class="checkbtn-radiobtn" name="questionrand" value="y" {{setChecked quesrand 'y'}}><span>Yes</span><input type="radio" class="checkbtn-radiobtn" name="questionrand" value="n" {{setChecked quesrand 'n'}}><span>No</span></p>
+								<p><label>Answer Randomised</label><input type="radio" class="checkbtn-radiobtn" name="answerrand" value="y" {{setChecked quesrand 'y'}}><span>Yes</span><input type="radio" class="checkbtn-radiobtn" name="answerrand" value="n" {{setChecked quesrand 'n'}}><span>No</span></p>
+								<p><label>Number of Questions</label><input type="text" placeholder="20" name="numofques" value="{{no_of_questions}}"></p>
+								<p><label>Time limit</label><input type="text" placeholder="10 Minutes" name="timelimit" value="{{timelimit}}">
+								</p>
+								<p id="difficulytLevels"><label>Difficulty Levels</label>{{{reteriveField "difficultylevel" selectlevels}}}</p>
+								<p id="skills"><label>Select Skills</label>{{{reteriveField "skill" skills}}}</p>
+
+                            {{/with}}    
+								<!--<div class="skil-table">
+									
+									<table class="skil-table-out">
+										<tr>
+											<th>Strand</th><th>Skill</th><th>Min Number to be added  to the Quiz</th>
+										</tr>
+										<tr>
+											<td>abc</td><td>xyz</td><td>5</td>
+										</tr>
+										<tr>
+											<td>abc</td><td>xyz</td><td>5</td>
+										</tr>
+									</table>
+								</div> -->
+							
+								<p class="new-test-sub"><input type="submit" class="input-submit" value="Save"></p>
+								</form>
+						</div>
+						</div>
+
+                    </div>
+               
+
+			
+			
+            </section>
+
+
+            <!-- dashboard right content section ends -->
+
+            <!-- footer starts -->
+            <footer class="admin-dash-footer">
+
+                <div class="copy-right">
+                    Copyright © 2016 
+                </div>
+
+            </footer>
+
+    <script src="/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="/js/amcharts.js"></script>
+    <script src="/js/light.js"></script>
+    <script src="/js/custom.js"></script>
+            <!-- footer ends -->
+        </div>
+    </div>
+    
+
+</template>    

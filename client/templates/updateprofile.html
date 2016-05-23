@@ -1,0 +1,51 @@
+<template name="updateprofile">
+		<div class="container login-container">
+			<div class="main-inner">
+				<!-- header starts -->
+					<header>
+						<div class="logo">
+							<a href="index.html"><img src="images/logo.png" alt=""></a>
+						</div>
+					</header>
+				<!-- header ends -->
+			
+				<!-- login starts -->
+					<section class="login-outer">
+						<div class="login-main">
+						<h1>Update Profile <a href="" class="close-form">X</a></h1>
+							<form class="login-form">
+							
+							{{#with profiledata}}
+								<p><label>First Name</label>
+								<input type="text" name="first_name" id="first_name" value="{{profile.first_name}}"></p>
+								<p><label>Last Name</label>
+								<input type="text"  name="last_name" value="{{profile.last_name}}"></p>
+
+								<p class="error-msg"></p>	
+							{{/with}}	
+								<p><input type="Submit" value="Update" class="input-submit"></p>
+
+							</form>
+						</div>
+					</section>			
+				<!-- login ends -->
+				<!-- footer starts -->
+					<footer>
+						<ul class="footer-nav">	
+							<li><a href="#">Terms</a></li>
+							<li><a href="#">Privacy</a></li>
+							<li><a href="#">Help</a></li>
+						</ul>
+						<div class="copy-right">
+							Copyright © 2016
+						</div>
+						<ul class="footer-social">
+							<li><a href="#"><i class="flaticon-icon-59439"></i></a></li>
+							<li><a href="#"><i class="flaticon-social"></i></a></li>
+							<li><a href="#"><i class="flaticon-icon-8800"></i></a></li>
+						</ul>
+					</footer>
+				<!-- footer ends -->			
+			</div>
+		</div>  
+	</template>

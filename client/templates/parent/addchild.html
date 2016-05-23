@@ -1,0 +1,56 @@
+<template name="addchild"> 	
+		<div class="container dashboard-container">
+			<div class="main-inner">
+				<!-- aside starts -->
+					{{ > parentmenu }}
+				<!-- aside ends -->
+				<!-- dashboard right content section starts -->
+					<section class="right-section-dash mCustomScrollbar"  data-mcs-theme="minimal">
+						<div class="row table-out-dash">
+							
+							<div class="box-dash new-member-box">
+							<p class="no-acc-msg">{{notificationmessage}}</p>
+								<h3 class="title-h3">
+									Add a child account
+								</h3>
+								<form class="new-member-add-form add-child-acc">
+									
+									<p><input type="text" placeholder="Last Name" class="input-width" name="last_name"></p>
+									<p><input type="text" placeholder="First Name" class="input-width" name="first_name"></p>
+									<label>Date of Birth</label>
+									<p><input type="text" placeholder="dd/mm/yyyy" class="date-picker-input" id="dob" name="date_of_birth"></p>
+									<input type="submit" value="Add Account" class="input-submit">
+									
+								</form>
+							</div>
+						</div>
+						
+							
+						
+					</section>
+				
+				
+				<!-- dashboard right content section ends -->
+			
+				<!-- footer starts -->
+					<footer class="admin-dash-footer">
+						
+						<div class="copy-right">
+							Copyright © 2016
+						</div>
+						
+					</footer>
+				<!-- footer ends -->			
+			</div>
+		</div>  
+		
+			<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+			<script src="js/amcharts.js"></script>
+			<script src="js/serial.js"></script>
+			<script src="js/light.js"></script>
+			<script src="js/custom.js"></script>
+			<script>
+			
+
+			</script>
+	</template>

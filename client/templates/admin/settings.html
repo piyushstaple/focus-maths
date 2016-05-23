@@ -1,0 +1,54 @@
+<template name="settings">
+    <div class="container dashboard-container">
+        <div class="main-inner">
+            <!-- aside starts -->
+         {{> adminmenu }}
+            <!-- aside ends -->
+            <!-- dashboard right content section starts -->
+            <section class="right-section-dash mCustomScrollbar" data-mcs-theme="minimal">
+               
+                <div class="row table-out-dash">
+                    <div class="box-dash map-main-outer">
+                        <form class="login-form">
+                            
+                            {{#with profiledata}}
+                                <p><label>First Name</label>
+                                <input type="text" name="first_name" id="first_name" value="{{profile.first_name}}"></p>
+                                <p><label>Last Name</label>
+                                <input type="text"  name="last_name" value="{{profile.last_name}}"></p>
+                                 <p><label>Email</label>
+                                <input type="text"  name="email" value="{{profile.email}}"></p>
+                               
+
+                                <p class="error-msg"></p>   
+                            {{/with}}   
+                                <p><input type="Submit" value="Update" class="input-submit"></p>
+
+                            </form>
+                </div>
+                </div>
+
+            </section>
+
+
+            <!-- dashboard right content section ends -->
+
+            <!-- footer starts -->
+            <footer class="admin-dash-footer">
+
+                <div class="copy-right">
+                    Copyright © 2016
+                </div>
+
+            </footer>
+            <!-- footer ends -->
+        </div>
+    </div>
+
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/amcharts.js"></script>
+    <script src="js/serial.js"></script>
+    <script src="js/light.js"></script>
+    <script src="js/custom.js"></script>
+
+</template> 

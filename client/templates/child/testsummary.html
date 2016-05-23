@@ -1,0 +1,79 @@
+<template name="testsummary">
+ <div class="container dashboard-container">
+        <div class="main-inner">
+		<!-- dashboard right content section starts -->
+            <section class="right-section-dash qust-outer mCustomScrollbar" data-mcs-theme="minimal">
+                 <div class="row table-out-dash">
+					<div class="tested-time">Timed Tests- Full Exam</div>
+					<div class="tested-btns">
+					{{#with resultDetails}}
+						<ul>
+							<li class="green-color">
+								<span>Correct</span>
+								<span>{{correctAnswers}}</span>
+							</li>
+							<li class="orange-color">
+								<span>Incorrect</span>
+								<span>{{incorrectAnswers}}</span>
+							</li>
+							<li class="certi-box">
+								<span>Accuracy</span>
+								<span>{{accuracy}}%</span>
+							</li>
+							<li class="incentive-box">
+								<span>Speed</span>
+								<span>{{testTimeTaken}}</span>
+							</li>
+							<li class="badge-yellow">
+								<span>Points</span>
+								<span>{{points}}</span>
+							</li>
+						</ul>
+					{{/with}}	
+					</div>
+                </div>
+
+			    <div class="row table-out-dash">
+                    <div class="box-dash double-box test-summary-outer">
+						<h2>Full Exam- <span>Pass</span></h2>
+						<p class="message-box">Message 1</p>
+					
+						<div class="row table-out-dash">
+							<div class="box-dash">
+								<h2 class="title-dash">
+									Corrections
+								</h2>
+								<div class="table-responsive mCustomScrollbar" data-mcs-theme="minimal" data-mcs-axis="yx">
+									<ul class="correction-list">
+									{{#each corrections}}
+											<li>{{#mathjax}}<p>$$ {{question}} $$</p>{{/mathjax}}<span>{{correctAnswer answerVals}}</span></li>
+									{{/each}}	
+									</ul>
+								</div>		
+							</div>
+							<div class="back-btn-outr">
+								<a class="blue-btn" href="/childdashboard" style="float:right;">Done</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+            <!-- dashboard right content section ends -->
+            <!-- footer starts -->
+            <footer class="admin-dash-footer">               
+                <div class="copy-right">
+                    Copyright © 2016
+                </div>
+            </footer>
+            <!-- footer ends -->
+        </div>
+    </div>
+
+   <script src="/js/jquery.mCustomScrollbar.concat.min.js"></script>
+   <script src="/js/amcharts.js"></script>
+   <script src="/js/pie.js"></script>
+   <script src="/js/light.js"></script>
+   <script src="/js/custom.js"></script>
+
+</template>

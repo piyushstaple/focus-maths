@@ -1,0 +1,162 @@
+<template name="admingamrification">
+    <div class="container dashboard-container">
+        <div class="main-inner">
+            <!-- aside starts -->
+            {{ >adminmenu }}
+            <!-- aside ends -->
+            <!-- dashboard right content section starts -->
+            <section class="right-section-dash mCustomScrollbar" data-mcs-theme="minimal">
+					<div class="row table-out-dash">
+                    <div class="box-dash">
+						<div class="tabs gamification-outer">
+    <ul class="tab-links">
+        <li class="active"><a href="#tab-badges">Badges</a></li>
+        <li><a href="#tab-levels"> Levels</a></li>
+        <li><a href="#tab-certificates">Certificates</a></li>
+    </ul>
+ 
+    <div class="tab-content">
+        <div id="tab-badges" class="tab active">
+        	       <div class="row table-out-dash">
+                    <div class="box-dash">
+                        <h2 class="title-dash">
+									 Badge Summary
+								</h2>
+                        <div class="table-responsive mCustomScrollbar" data-mcs-theme="minimal" data-mcs-axis="yx">
+                            <table class="dash-table test-type-table">
+                                <thead>
+                                    <tr>
+                                        <th>Badge</th>
+                                        <th>Badge Name</th>
+                                        <th>Badge Creiteria</th>
+                                        <th>Achieved by</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="orange-text badge-ic"><i class="flaticon-ribbon"></i></td>
+                                        <td>Years of Service Certificate</td>
+                                        <td>Questions Answered</td>
+                                        <td>20 Users</td>
+                                        <td>
+											<a class="blue-text" href="#"><i class="flaticon-tool-3 "></i></a>
+											<a class="red-text" href="#"><i class="flaticon-close"></i></a>
+										</td>
+									</tr>
+                                    <tr>
+                                        <td class="blue1-text badge-ic"><i class="flaticon-social-3"></i></td>
+                                        <td>Years of Service Certificate</td>
+                                        <td>Questions Answered</td>
+                                        <td>20 Users</td>
+                                        <td>
+											<a class="blue-text" href="#"><i class="flaticon-tool-3 "></i></a>
+											<a class="red-text" href="#"><i class="flaticon-close"></i></a>
+										</td>
+									</tr>
+									<tr>
+                                        <td class="yellow-text badge-ic"><i class="flaticon-ribbon"></i></td>
+                                        <td>Years of Service Certificate</td>
+                                        <td>Questions Answered</td>
+                                        <td>20 Users</td>
+                                        <td>
+											<a class="blue-text" href="#"><i class="flaticon-tool-3 "></i></a>
+											<a class="red-text" href="#"><i class="flaticon-close"></i></a>
+										</td>
+									</tr>
+									
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+				
+			     <div class="row table-out-dash">
+                    <div class="box-dash">
+                        <h2 class="title-dash">
+									Create New Badges
+								</h2>
+                        <div class="table-responsive">
+							<form class="create-bages-form">
+								<p>
+									<label>Badge Name</label>
+									<input type="text" placeholder="Years of Service Certificate">
+								</p>
+								<p>
+									<label>Badge Creiteria</label>
+									<input type="text" placeholder="Years of Service Certificate">
+								</p>
+								<p>
+									<label>Upload Icon</label>
+									<input type="text" placeholder="">
+								</p>
+								<p class="submit-out"><input type="submit" class="input-submit" value="Create"></p>
+							</form>
+						</div>
+                    </div>
+                </div>
+				
+		</div>
+ 
+        <div id="tab-levels" class="tab">
+            
+        </div>
+ 
+        <div id="tab-certificates" class="tab">
+          
+        </div>
+ 
+        <div id="tab-hist-test" class="tab">
+             	<form class="report-acc-form">
+							<h2>Select Year</h2>
+							<div class="label-outer">
+								<p><input type="checkbox"><label>Year 1</label></p>
+								<p><input type="checkbox"><label>Year 2</label></p>
+								<p><input type="checkbox"><label>Year 3</label></p>
+								<p><input type="checkbox"><label>Year 4</label></p>
+								<p><input type="checkbox"><label>Year 5</label></p>
+								<p><input type="checkbox"><label>Year 6</label></p>
+								<p><input type="checkbox"><label>All</label></p>
+							</div>
+							<h2>Reporting Period</h2>
+							<div class="label-outer">
+								<p><input type="checkbox"><label>1 month</label></p>
+								<p><input type="checkbox"><label>2 month</label></p>
+								<p><input type="checkbox"><label>3 month</label></p>
+								<p><input type="checkbox"><label>Half Year</label></p>
+								<p><input type="checkbox"><label>Full Year</label></p>
+								<p><input type="checkbox"><label>All</label></p>
+							</div>
+						</form>
+						 <div id="accurancy-chart"></div>	
+				
+        </div>
+    </div>
+</div>
+						
+					
+					
+					
+                       
+                    </div>
+                </div>
+         
+		  </section>
+
+
+            <!-- dashboard right content section ends -->
+
+            <!-- footer starts -->
+            <footer class="admin-dash-footer">
+
+                <div class="copy-right">
+                    Copyright © 2016
+                </div>
+
+            </footer>
+            <!-- footer ends -->
+        </div>
+    </div>
+
+    
+</template>

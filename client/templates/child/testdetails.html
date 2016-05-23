@@ -1,0 +1,85 @@
+<template name="testdetails">
+ <div class="container dashboard-container">
+        <div class="main-inner">
+		   <!-- aside starts -->
+            {{ >childmenu  }}
+            <!-- aside ends -->
+		<!-- dashboard right content section starts -->
+            <section class="right-section-dash mCustomScrollbar" data-mcs-theme="minimal">
+                 <div class="row table-out-dash">
+					
+					<div class="tested-btns">
+					{{#with testbasicDetail}}	
+                        <ul class="child-past-test">
+                    
+							<li class="green-color">
+								<span>{{testname}}</span>								
+							</li>
+							<li class="orange-color">
+								<span>{{correctAnswer}} correct out of {{no_of_ques}}</span>							
+							</li>
+							<li class="certi-box">
+								<span>{{corrctPer}}% correct</span>								
+							</li>
+							<li class="incentive-box">
+								<span>{{testTimeTaken}}</span>							
+							</li>
+						</ul>
+                       {{/with}} 
+					</div>
+                </div>
+
+			    
+											
+						<div class="row table-out-dash">
+							<div class="box-dash">
+								
+								<div class="table-responsive mCustomScrollbar" data-mcs-theme="minimal" data-mcs-axis="yx">
+									
+									   <table class="dash-table">
+                                <thead>
+                                    <tr>
+                                        <th>Q. no</th>
+                                        <th>Question</th>
+                                        <th>User Answer</th>
+                                        <th>Correct Answer</th>
+                                        <th>Skill</th>                                       
+                                    </tr>
+                                </thead>
+                                <tbody>
+                        {{#each testResultDetails}}        
+                                    <tr  class="{{ checksrno  srno}}">
+                                        <td>{{srno}}</td>
+                                        <td>{{#mathjax}} <span>$$ {{question}} $$ </span>{{/mathjax}}</td>
+								    	<td>{{userAns}}</td>
+                                        <td>{{correctAnswer}}</td>
+										<td>{{ skill}}</td>
+                                    </tr>
+                        {{/each}}            
+                              
+                                </tbody>
+                            </table>
+                       
+									
+								</div>		
+							</div>
+							<div class="bck-btn-inr">
+					
+						<a class="blue-btn" href="/childpastreports">Back</a><a href="/childdashboard" class="orange-btn">Cancel</a>
+						
+</div>
+						</div>
+					
+			</section>
+
+            <!-- dashboard right content section ends -->
+            <!-- footer starts -->
+            <footer class="admin-dash-footer">               
+                <div class="copy-right">
+                    Copyright © 2016
+                </div>
+            </footer>
+            <!-- footer ends -->
+        </div>
+    </div>
+    </template>

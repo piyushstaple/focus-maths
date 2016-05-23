@@ -1,0 +1,18 @@
+Followings are the packages that i am using in my projects. 
+
+
+Accounts-password : This package  for the authenticiation in our system such as for the login, signup , forgot etc
+
+Reactive Method : This package  for sedning the aschronous request to server
+
+Iron router : This package used for the routing
+
+Froala Editor : This package for WYSWIYG editor
+
+Email : This package is for sending an email . Email will be send with smtp settings
+
+Payapl : Package used for the paypal payments
+
+Stripe: Used for the stripe payments
+
+

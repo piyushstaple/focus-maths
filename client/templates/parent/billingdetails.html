@@ -1,0 +1,103 @@
+<template name="billingdetails">
+ <div class="container dashboard-container">
+        <div class="main-inner">
+            <!-- aside starts -->
+           	{{>parentmenu}}
+            <!-- aside ends -->
+            <!-- dashboard right content section starts -->
+            <section class="right-section-dash mCustomScrollbar" data-mcs-theme="minimal">
+				    <div class="row table-out-dash">
+                   <div class="box-dash">
+						<form class="billing-detail-from">
+							<div class="billing-left">
+								<h2>Member Billing Details</h2>
+								<p><label>First Name:</label> <input type="text" placeholder="Anna"></p>
+								<p><label>Last Name:</label> <input type="text" placeholder="Doe"></p>
+								<p><label>Address 1:</label> <input type="text" placeholder="Address"></p>
+								<p><label>Address 2:</label> <input type="text" placeholder="Address"></p>
+								<p><label>Post Code:</label> <input type="text" placeholder="#773556"></p>
+								
+							</div>
+							<div class="billing-right">
+								<h2>Payment Information</h2>
+								<p class="card-no-bill"><label>Card Number:</label> <input type="text"></p>
+								<p class="card-exp-bill"><label>Expiry Date:</label> <input type="text" placeholder="MM"><input type="text" placeholder="YY"></p>
+								<p class="cvv-bill"><label>CVV:</label> <input type="text" placeholder=""></p>
+								<div class="profile-edit-btn">
+								<a href="#" class="blue-btn">Update</a>
+								<a href="#" class="orange-btn">Cancel</a>
+							</div>
+							</div>
+						</form>
+					</div>
+				</div>
+	 
+			       <div class="row table-out-dash">
+                    <div class="box-dash">
+                        <h2 class="title-dash">
+									Invoice
+								</h2>
+                        <div class="table-responsive mCustomScrollbar" data-mcs-theme="minimal" data-mcs-axis="yx">
+                            <table class="dash-table test-type-table">
+                                <thead>
+                                    <tr>
+                                        
+                                        <th>Date</th>
+										<th>Invoice Number</th>
+                                        <th colspan="2">Amount Billed</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="biling-inv-list">
+                                    <tr>
+										<td><i class="flaticon-days blue-text"></i> Feb 19, 2016</td>
+                                        <td>HFJB5567</td>
+										<td>$ 45</td>                                      
+										<td> <a class="blue-text" href="/invoicedetail">View Invoice</a></td>										
+									</tr>
+                                    <tr>
+										<td><i class="flaticon-days blue-text"></i> Feb 19, 2016</td>
+                                        <td>HFJB5567</td>
+										<td>$ 45</td>                                      
+										<td> <a class="blue-text" href="/invoicedetail">View Invoice</a></td>										
+									</tr>
+									<tr>
+										<td><i class="flaticon-days blue-text"></i> Feb 19, 2016</td>
+                                        <td>HFJB5567</td>
+										<td>$ 45</td>                                      
+										<td> <a class="blue-text" href="/invoicedetail">View Invoice</a></td>										
+									</tr>
+									<tr>
+										<td><i class="flaticon-days blue-text"></i> Feb 19, 2016</td>
+                                        <td>HFJB5567</td>
+										<td>$ 45</td>                                      
+										<td> <a class="blue-text" href="/invoicedetail">View Invoice</a></td>										
+									</tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+		
+
+	 </section>
+
+
+            <!-- dashboard right content section ends -->
+
+            <!-- footer starts -->
+            <footer class="admin-dash-footer">
+
+                <div class="copy-right">
+                    Copyright © 2016
+                </div>
+
+            </footer>
+            <!-- footer ends -->
+        </div>
+    </div>
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/amcharts.js"></script>
+    <script src="js/serial.js"></script>
+    <script src="js/light.js"></script>
+    <script src="js/custom.js"></script>
+    </template>
